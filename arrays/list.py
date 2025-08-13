@@ -32,9 +32,10 @@ class List:
 
         if index < 0 or index > self._len:
             raise IndexError(f"Index {index} out of bounds 0 - {self._len}")
-        
-        for i in range(self._len - 1, index - 1, -1):
-            self._arr[i + 1] = self._arr[i]
+
+        if index != self._len:        
+            for i in range(self._len - 1, index - 1, -1):
+                self._arr[i + 1] = self._arr[i]
 
         self._arr[index] = value
 
