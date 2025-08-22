@@ -9,8 +9,6 @@ testdata = [
 
 @pytest.mark.parametrize("nums", testdata)
 def test_bucket_sorting(nums):
-    nums = [3, 2, 1, 0]
-
     sorted = bucket_sort(nums, max(nums), min(nums))
 
     nums.sort()
